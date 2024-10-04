@@ -1,6 +1,6 @@
 # Git repository with labs 3, 4 and 5
 
-Simle javascript application with CRUD operations for 3rd and 4th.
+Simple js application with CRUD operations for 3rd and 4th.
 For 5th make connection snd data transfer with server using JS.
 
 ## Design

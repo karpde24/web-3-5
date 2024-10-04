@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crypto watchlist</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:wght@400,600,700"
+    />
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-and-nav">
+        WEB3
+        <nav class="inline-block margin-left">
+          <button id="list-button" class="nav__button nav__button--active">
+            Favorite Crypto 
+          </button>
+          <button
+            id="add-button"
+            class="nav__button"
+          >
+            Add Crypto
+          </button>
+          <button id="edit-button" class="nav__button no-display">
+            Edit crypto
+          </button>
+        </nav>
+      </div>
+
+      <div id="search-group" class="search">
+        <input
+          type="text"
+          placeholder="Find crypto..."
+          class="form__input"
+          id="search_input"
+        />
+        <button class="button button--outlined margin-left inline-block" id="search_button">
+          Search
+        </button>
+        <button class="button button--outlined button--outlined--red margin-left inline-block" id="reset_button">
+          Reset
+        </button>
+      </div>
+    </header>
+    <main id="form-page" class="no-display">
+      <section class="section section--form">
+        <div class="center">
+          <div class="form" id="form__crypto">
+            <h1 class="inline-block" id="form__headline">Add crypto</h1>
+            <label for="from__name">Name</label>
+            <input
+              class="form__input form__input--add"
+              type="text"
+              id="form__name"
+            />
+            <label for="ticker">Ticker</label>
+            <input
+              class="form__input form__input--add"
+              type="text"
+              id="form__ticker"
+            />
+            <label for="form__domain">Domain</label>
+            <select class="form__input--add form__select" id="form__domain">
+              <option value="GameFi">DeFi</option>
+              <option value="GameFi">GameFi</option>
+              <option value="for L1 Blockchain">L1 Blockchain</option>
+              <option value="for L2 Blockchain">L2 Blockchain</option>
+            </select>
+            <label for="form__circulating_supply">Circulating supply</label>
+            <input
+              class="form__input form__input--add"
+              type="text"
+              id="form__circulating_supply"
+            />
+            <label for="form__price">Price</label>
+            <input
+              class="form__input form__input--add"
+              type="text"
+              id="form__price"
+            />
+            <label for="form__ath">ATH</label>
+            <input
+              class="form__input form__input--add"
+              type="text"
+              id="form__ath"
+            />
+            <label for="form__mcap">Market Cap</label>
+            <input
+              class="form__input form__input--add"
+              type="text"
+              id="form__mcap"
+            />
+            <button class="button form__submit" id="form__submit">
+              Submit
+            </button>
+            <div class="modal modal--error flex-self-center no-display" id="modal_error">
+              <span><b>Oh crap!</b><span class="margin-left-s" id="modal_error_text"></span></span>
+              <button class="modal__close" id="modal_close"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <main id="list-page">
+      <aside class="aside inline-block">
+        <h2 class="h2 no-margin">Manage list</h2>
+        <div class="switch padding-bottom">
+          <span class="switch__label bold-less-emp"
+            >Sort by the biggest<br />
+            Market Cap</span
+          >
+          <label class="switch__container margin-left">
+            <input type="checkbox" class="switch__checkbox checkbox--utility" id="switch" />
+            <span class="switch__container__slider"></span>
+          </label>
+        </div>
+        <p class="bold-less-emp">Count capitalization:</p>
+        <button class="button aside__count-button margin-bottom" id="count_mcap_button">Count</button>
+        <div class="aside__mcap-text">Capitalization:
+          <span class="aside__mcap-text__mcap" id="mcap-text">$0.00</span>
+        </div>
+      </aside>
+      <section class="section">
+        <div class="grid" id="grid"></div>
+      </section>
+    </main>
+    <script src="scripts/model.js"></script>
+    <script src="scripts/script.js"></script>
+    <div id="template" class="no-display">
+      <div class="card">
+        <h3 class="card__name" id="card__name">Test</h3>
+        <p class="card__text">Ticker: <span id="card__ticker"></span></p>
+        <p class="card__text">Domain: <span id="card__domain"></span></p>
+        <p class="card__text">
+          Circulating supply: <span id="card__circulating_supply"></span>
+        </p>
+        <p class="card__text">Price: <span id="card__price"></span></p>
+        <p class="card__text">
+          ATH: <span id="card__ath"></span>
+        </p>
+        <p class="card__text">
+          Market Cap: <span class="card__mcap" id="card__mcap"></span>
+        </p>
+        <div class="card__controls">
+          <button
+            class="button card__controls__button card__controls__button--edit"
+            id="card__edit"
+          >
+            Edit
+          </button>
+          <button
+            class="button card__controls__button card__controls__button--remove"
+            id="card__remove"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

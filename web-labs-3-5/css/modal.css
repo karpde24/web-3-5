@@ -1,0 +1,32 @@
+.modal {
+    min-width: 40vw;
+    position: fixed;
+    bottom: 5rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #999;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.modal--error {
+    background-color:#F2DEDE;
+    border: 1px solid #EBCCD1; 
+    color: #A94442;
+}
+
+.modal__close {
+    background-color: inherit;
+    border: none;
+    
+    align-self: flex-end;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background-image: url("../images/close.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}

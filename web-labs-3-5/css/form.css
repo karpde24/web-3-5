@@ -1,0 +1,38 @@
+.form {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    width: 18.75rem;
+}
+
+.form__input {
+    height: 2rem;
+    width: 15.625rem;
+    border-radius: 0.625rem;
+    border: 1px solid #777777;
+    padding-left: 0.3rem;
+    box-sizing: border-box;
+}
+
+.form__input--add {
+    width: inherit;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.form__input--error {
+    border-color: red;
+}
+
+.form__submit {
+    box-sizing: border-box;
+    width: inherit;
+    height: 2.5rem;
+}
+
+.form__select {
+    background-color: aliceblue;
+    border: 1px solid #777777;
+    border-radius: 0.625rem;
+}

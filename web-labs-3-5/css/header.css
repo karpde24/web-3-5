@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.logo-and-nav {
+    font-size: 20px;
+    color: #777777;
+
+}
+
+.nav__button {
+    display: inline-block;
+    border-radius: 0;
+    padding: 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+.nav__button--active {
+    background-color: #e0e0e0;
+}
+
+.search {
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+}

@@ -1,0 +1,33 @@
+.card {
+    border: 1px solid #666;
+    width: 180px;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3%;
+}
+
+.card__name {
+    margin: 2px;
+    text-align: center;
+}
+
+.card__text {
+    margin: 2px;
+}
+
+.card__controls__button {
+    width: 80px;
+    margin: 4px;
+}
+
+.card__controls__button--edit {
+    background-color: #0bafeb;
+}
+
+.card__controls__button--remove {
+    background-color: #D9534F;
+}
